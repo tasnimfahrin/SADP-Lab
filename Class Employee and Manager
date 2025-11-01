@@ -1,0 +1,30 @@
+class Employee {
+    String name;
+    double salary;
+
+    Employee(String name, double salary) {
+        this.name = name;
+        this.salary = salary;
+    }
+}
+
+class Manager extends Employee {
+    String department;
+
+    Manager(String name, double salary, String department) {
+        super(name, salary);
+        this.department = department;
+    }
+
+    @Override
+    public String toString() {
+        return "Name: " + name + ", Salary: " + salary + ", Department: " + department;
+    }
+}
+
+public class EmployeeTest {
+    public static void main(String[] args) {
+        Manager m = new Manager("Tasnim", 50000, "IT");
+        System.out.println(m.toString());
+    }
+}
